@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Twist Boulder</string>
+    <string-array name="colors_array">
+        <item>Oranžová</item>
+        <item>Zelená</item>
+        <item>Modrá</item>
+        <item>Červená</item>
+        <item>Fialová</item>
+        <item>Žlutá</item>
+        <item>Černá</item>
+        <item>Bílá</item>
+        <item>Šedá</item>
+        <item>Růžová</item>
+    </string-array>
+</resources>

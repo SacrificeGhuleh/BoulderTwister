@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Twist Boulder</string>
+    <string-array name="colors_array">
+        <item>Orange</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Purple</item>
+        <item>Yellow</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Grey</item>
+        <item>Pink</item>
+    </string-array>
+</resources>
