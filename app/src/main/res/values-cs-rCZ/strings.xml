@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Twist Boulder</string>
-    <string-array name="colors_array">
+    <string-array name="boulder_colors_names">
         <item>Oranžová</item>
         <item>Zelená</item>
         <item>Modrá</item>
@@ -12,5 +12,14 @@
         <item>Bílá</item>
         <item>Šedá</item>
         <item>Růžová</item>
+        <item>Libovolná</item>
+    </string-array>
+
+    <string-array name="limb_names">
+        <item>Levá ruka</item>
+        <item>Pravá ruka</item>
+        <item>Levá noha</item>
+        <item>Pravá noha</item>
+        <item>Libovolná</item>
     </string-array>
 </resources>

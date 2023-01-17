@@ -1,4 +1,4 @@
-package com.sacrificeghuleh.twistboulder
+package com.sacrificeghuleh.twistboulder.colors
 
 import android.graphics.Color
 import android.graphics.PorterDuff
@@ -7,25 +7,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageView
-import androidx.annotation.ColorRes
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.sacrificeghuleh.twistboulder.R
 
 class ColorAdapter(
-    var colors: List<ColorModel>
+    private var colors: List<ColorModel>
 ) : RecyclerView.Adapter<ColorAdapter.ColorViewHolder>() {
 
     inner class ColorViewHolder(colorView: View) : RecyclerView.ViewHolder(colorView) {
-        public val checkbox: CheckBox
-        public val imageView: ImageView
+        val checkbox: CheckBox
+        val imageView: ImageView
 
         init {
             checkbox = colorView.findViewById(R.id.colorEnableCheckbox)
             imageView = colorView.findViewById(R.id.colorPreviewView)
         }
 
-        public fun setSvgColor(color: Color) =
-            imageView.setColorFilter(color.toArgb(), PorterDuff.Mode.SRC_IN);
+        fun setSvgColor(color: Color) =
+            imageView.setColorFilter(color.toArgb(), PorterDuff.Mode.SRC_IN)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ColorViewHolder {
@@ -38,7 +37,11 @@ class ColorAdapter(
     override fun onBindViewHolder(holder: ColorViewHolder, position: Int) {
         holder.apply {
             checkbox.text = colors[position].name
-            setSvgColor(colors[position].color)
+            if (position < colors.size - 1) {
+                setSvgColor(colors[position].color)
+            } else {
+                imageView.setImageResource(R.drawable.circlecolorful)
+            }
         }
     }
 

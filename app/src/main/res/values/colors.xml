@@ -23,5 +23,6 @@
         <item>#FFFFFFFF</item> <!-- white -->
         <item>#FF757575</item> <!-- grey -->
         <item>#E91E63</item> <!-- pink -->
+        <item>#00000000</item> <!-- any -->
     </array>
 </resources>
