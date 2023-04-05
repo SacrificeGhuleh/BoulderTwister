@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Twist Boulder"
-include ':app'
+include ':TwistBoulder'

@@ -2,6 +2,7 @@ package com.sacrificeghuleh.twistboulder.colors
 
 import android.graphics.Color
 import android.graphics.PorterDuff
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,11 +37,19 @@ class ColorAdapter(
 
     override fun onBindViewHolder(holder: ColorViewHolder, position: Int) {
         holder.apply {
+            Log.d(
+                "ColorAdapter",
+                "Adding " + colors[position].name + " at position $position"
+            )
             checkbox.text = colors[position].name
             if (position < colors.size - 1) {
                 setSvgColor(colors[position].color)
             } else {
                 imageView.setImageResource(R.drawable.circlecolorful)
+            }
+
+            checkbox.setOnClickListener {
+                colors[position].enabled = checkbox.isEnabled
             }
         }
     }
