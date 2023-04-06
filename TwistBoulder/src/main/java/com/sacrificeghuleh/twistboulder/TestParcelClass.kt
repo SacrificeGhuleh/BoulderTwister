@@ -5,6 +5,8 @@ import android.os.Parcelable
 import com.sacrificeghuleh.twistboulder.colors.ColorModel
 import com.sacrificeghuleh.twistboulder.limbs.LimbModel
 
+const val BoulderParcelKey = "BoulderParcel"
+
 data class TestParcelClass(
     val colorModels: ArrayList<ColorModel>,
     val limbModels: ArrayList<LimbModel>

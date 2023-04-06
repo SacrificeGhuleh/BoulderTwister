@@ -12,8 +12,6 @@ import com.sacrificeghuleh.twistboulder.colors.ColorAdapter
 import com.sacrificeghuleh.twistboulder.colors.ColorModel
 import com.sacrificeghuleh.twistboulder.limbs.LimbAdapter
 import com.sacrificeghuleh.twistboulder.limbs.LimbModel
-import kotlin.random.Random
-
 
 class MainActivity : AppCompatActivity() {
     private var twistBoulderSetting =
@@ -77,23 +75,23 @@ class MainActivity : AppCompatActivity() {
     fun startTwist(view: View) {
         val intent = Intent(this, TwistActivity::class.java)
 
-        var testParcel = TestParcelClass(ArrayList(), ArrayList())
+        var parcel = TestParcelClass(ArrayList(), ArrayList())
 
         twistBoulderSetting.apply {
             for (colorModel in colorModels) {
                 if (colorModel.enabled) {
-                    testParcel.colorModels.add(colorModel)
+                    parcel.colorModels.add(colorModel)
                 }
             }
 
             for (limbModel in limbModels) {
                 if (limbModel.enabled) {
-                    testParcel.limbModels.add(limbModel)
+                    parcel.limbModels.add(limbModel)
                 }
             }
         }
 
-        intent.putExtra("Test", testParcel)
+        intent.putExtra(BoulderParcelKey, parcel)
         startActivity(intent)
     }
 }

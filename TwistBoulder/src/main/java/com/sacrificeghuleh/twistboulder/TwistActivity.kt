@@ -28,29 +28,12 @@ class TwistActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_twist)
-        var textView = findViewById<TextView>(R.id.descriptTextView)
-
-        try {
-            val settings: TwistBoulderSetting =
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
-                    intent.extras?.getParcelable(
-                        TwistBoulderSettingKey,
-                        TwistBoulderSetting::class.java
-                    )!!
-                else
-                    intent.extras?.getParcelable<TwistBoulderSetting>(TwistBoulderSettingKey) as TwistBoulderSetting
-
-            textView.text = settings.toString()
-        } catch (e: Exception) {
-            Log.e("TwistActivity", e.toString())
-        }
 
         try {
             val test = intent.extras?.getParcelable(
-                "Test", TestParcelClass::class.java
+                BoulderParcelKey, TestParcelClass::class.java
             )!!
-            Log.w("TwistActivity TEST", test.toString())
-            textView.text = test.toString()
+            Log.w(BoulderParcelKey, test.toString())
 
             colorModels = test.colorModels
             limbModels = test.limbModels
