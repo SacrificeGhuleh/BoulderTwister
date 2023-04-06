@@ -80,10 +80,14 @@ class TwistActivity : AppCompatActivity() {
             imageView.setColorFilter(currentColor!!.color.toArgb(), PorterDuff.Mode.SRC_IN)
 
         var stepTextView = findViewById<TextView>(R.id.stepTextView)
-        stepTextView.text = "Step $step"
+        stepTextView.text = resources.getString(R.string.step_string, step)
 
         var descriptTextView = findViewById<TextView>(R.id.descriptTextView)
-        descriptTextView.text = currentLimb!!.name + " on " + currentColor!!.name
+        descriptTextView.text = resources.getString(
+            R.string.placement_string,
+            currentLimb!!.name,
+            currentColor!!.nameAdjective
+        )
     }
 
     fun onClickGenerate(view: View) {

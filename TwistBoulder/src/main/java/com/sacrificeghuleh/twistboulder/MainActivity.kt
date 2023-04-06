@@ -32,13 +32,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpColors() {
         val colNames = resources.getStringArray(R.array.boulder_colors_names) //Array<String>
+        val colNamesAdj =
+            resources.getStringArray(R.array.boulder_colors_names_adjectives) //Array<String>
         val colCodes = resources.getIntArray(R.array.boulder_colors) // IntArray
-        colCodes.zip(colNames) { colCode, colName ->
-            Log.d("MainActivity", "Setting up color $colName")
+
+        for (i in colNames.indices) {
+            Log.d("MainActivity", "Setting up color $i")
             twistBoulderSetting.colorModels.add(
                 ColorModel(
-                    colName,
-                    Color.valueOf(colCode),
+                    colNames[i],
+                    colNamesAdj[i],
+                    Color.valueOf(colCodes[i]),
                     R.drawable.circle
                 )
             )

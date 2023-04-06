@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Twist Boulder</string>
+    <string name="placement_string">%1$s na %2$s</string>
+    <string name="step_string">Krok %1$d</string>
     <string-array name="boulder_colors_names">
         <item>Oranžová</item>
         <item>Zelená</item>
@@ -13,6 +15,20 @@
         <item>Šedá</item>
         <item>Růžová</item>
         <item>Libovolná</item>
+    </string-array>
+
+    <string-array name="boulder_colors_names_adjectives">
+        <item>oranžovou</item>
+        <item>zelenou</item>
+        <item>modrou</item>
+        <item>červenou</item>
+        <item>fialovou</item>
+        <item>žlutou</item>
+        <item>černou</item>
+        <item>bílou</item>
+        <item>šedou</item>
+        <item>růžovou</item>
+        <item>libovolnou</item>
     </string-array>
 
     <string-array name="limb_names">
