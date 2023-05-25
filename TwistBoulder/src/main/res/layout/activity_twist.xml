@@ -7,15 +7,30 @@
     tools:context=".TwistActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:id="@+id/imageView2"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:background="#FFEBEE"
         android:cropToPadding="false"
+        android:onClick="onClickGenerate"
         android:paddingHorizontal="5dp"
         android:paddingVertical="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stepTextView"
+        app:layout_constraintTop_toBottomOf="@+id/stepTextView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:cropToPadding="false"
+        android:onClick="onClickGenerate"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
         app:srcCompat="@drawable/circle" />
 
     <Button
@@ -47,7 +62,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
         android:id="@+id/resetBtn"

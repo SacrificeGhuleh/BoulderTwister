@@ -15,7 +15,7 @@ import com.sacrificeghuleh.twistboulder.limbs.LimbModel
 
 class MainActivity : AppCompatActivity() {
     private var twistBoulderSetting =
-        TwistBoulderSetting(ArrayList(), ArrayList())
+        BoulderSettings(ArrayList(), ArrayList())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
     fun startTwist(view: View) {
         val intent = Intent(this, TwistActivity::class.java)
 
-        var parcel = TestParcelClass(ArrayList(), ArrayList())
+        var parcel = BoulderSettings(ArrayList(), ArrayList())
 
         twistBoulderSetting.apply {
             for (colorModel in colorModels) {

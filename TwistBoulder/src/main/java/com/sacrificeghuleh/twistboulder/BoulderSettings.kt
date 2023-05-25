@@ -1,14 +1,13 @@
 package com.sacrificeghuleh.twistboulder
 
-import android.os.Build
 import android.os.Parcel
 import android.os.Parcelable
 import com.sacrificeghuleh.twistboulder.colors.ColorModel
 import com.sacrificeghuleh.twistboulder.limbs.LimbModel
 
-const val TwistBoulderSettingKey = "TwistBoulderSetting"
+const val BoulderParcelKey = "BoulderParcel"
 
-data class TwistBoulderSetting(
+data class BoulderSettings(
     val colorModels: ArrayList<ColorModel>,
     val limbModels: ArrayList<LimbModel>
 ) : Parcelable {
@@ -26,12 +25,12 @@ data class TwistBoulderSetting(
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<TestParcelClass> {
-        override fun createFromParcel(parcel: Parcel): TestParcelClass {
-            return TestParcelClass(parcel)
+    companion object CREATOR : Parcelable.Creator<BoulderSettings> {
+        override fun createFromParcel(parcel: Parcel): BoulderSettings {
+            return BoulderSettings(parcel)
         }
 
-        override fun newArray(size: Int): Array<TestParcelClass?> {
+        override fun newArray(size: Int): Array<BoulderSettings?> {
             return arrayOfNulls(size)
         }
     }

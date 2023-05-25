@@ -30,13 +30,13 @@ class TwistActivity : AppCompatActivity() {
         setContentView(R.layout.activity_twist)
 
         try {
-            val test = intent.extras?.getParcelable(
-                BoulderParcelKey, TestParcelClass::class.java
+            val models = intent.extras?.getParcelable(
+                BoulderParcelKey, BoulderSettings::class.java
             )!!
-            Log.w(BoulderParcelKey, test.toString())
+            Log.w(BoulderParcelKey, models.toString())
 
-            colorModels = test.colorModels
-            limbModels = test.limbModels
+            colorModels = models.colorModels
+            limbModels = models.limbModels
 
 
         } catch (e: Exception) {
