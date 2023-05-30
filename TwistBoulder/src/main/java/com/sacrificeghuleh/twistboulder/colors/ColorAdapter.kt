@@ -38,7 +38,7 @@ class ColorAdapter(
     override fun onBindViewHolder(holder: ColorViewHolder, position: Int) {
         holder.apply {
             Log.d(
-                "ColorAdapter",
+                this.javaClass.name,
                 "Adding " + colors[position].name + " at position $position"
             )
             checkbox.text = colors[position].name

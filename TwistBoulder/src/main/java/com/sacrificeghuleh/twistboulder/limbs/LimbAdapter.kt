@@ -12,10 +12,6 @@ class LimbAdapter(
     private var limbs: List<LimbModel>
 ) : RecyclerView.Adapter<LimbAdapter.LimbViewHolder>() {
 
-    init {
-        Log.d("LimbAdapter", "Initialization, limbs: $limbs")
-    }
-
     inner class LimbViewHolder(LimbView: View) : RecyclerView.ViewHolder(LimbView) {
         val checkbox: CheckBox
 
@@ -34,14 +30,13 @@ class LimbAdapter(
     override fun onBindViewHolder(holder: LimbAdapter.LimbViewHolder, position: Int) {
         holder.apply {
             Log.d(
-                "ColorAdapter",
+                this.javaClass.name,
                 "Adding " + limbs[position].name + " at position $position"
             )
             checkbox.text = limbs[position].name
             checkbox.setOnClickListener {
-                limbs[position].enabled = checkbox.isEnabled
+                limbs[position].enabled = checkbox.isChecked
             }
-            setIsRecyclable(true)
         }
     }
 
