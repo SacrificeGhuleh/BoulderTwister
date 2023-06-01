@@ -24,6 +24,11 @@ class TwistActivity : AppCompatActivity() {
     private var currentLimb: LimbModel? = null
     private var currentColor: ColorModel? = null
 
+    private var lastLimb: LimbModel? = null
+
+    private val numberOfRetries = 3
+
+
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +54,13 @@ class TwistActivity : AppCompatActivity() {
 
     fun generate() {
         step++
-        currentLimb = limbModels[Random.nextInt(limbModels.size)]
+        lastLimb = currentLimb
+        var generatedLimb: LimbModel? = null
+        for (i in 0..numberOfRetries) {
+            generatedLimb = limbModels[Random.nextInt(limbModels.size)]
+            if (generatedLimb != lastLimb) break
+        }
+        currentLimb = generatedLimb
         currentColor = colorModels!![Random.nextInt(colorModels!!.size)]
 
         onRegenerate()
