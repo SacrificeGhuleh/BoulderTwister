@@ -1,28 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="light_blue_400">#FF29B6F6</color>
-    <color name="light_blue_600">#FF039BE5</color>
-    <color name="gray_400">#FFBDBDBD</color>
-    <color name="gray_600">#FF757575</color>
+    <color name="seed">#FF5722</color>
+    <color name="md_theme_light_primary">#B02F00</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#FFDBD1</color>
+    <color name="md_theme_light_onPrimaryContainer">#3B0900</color>
+    <color name="md_theme_light_secondary">#77574E</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#FFDBD1</color>
+    <color name="md_theme_light_onSecondaryContainer">#2C150F</color>
+    <color name="md_theme_light_tertiary">#9B4426</color>
+    <color name="md_theme_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_light_tertiaryContainer">#FFDBD0</color>
+    <color name="md_theme_light_onTertiaryContainer">#390C00</color>
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_light_errorContainer">#FFDAD6</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    <color name="md_theme_light_onErrorContainer">#410002</color>
+    <color name="md_theme_light_background">#FFFBFF</color>
+    <color name="md_theme_light_onBackground">#201A18</color>
+    <color name="md_theme_light_surface">#FFFBFF</color>
+    <color name="md_theme_light_onSurface">#201A18</color>
+    <color name="md_theme_light_surfaceVariant">#F5DED8</color>
+    <color name="md_theme_light_onSurfaceVariant">#53433F</color>
+    <color name="md_theme_light_outline">#85736E</color>
+    <color name="md_theme_light_inverseOnSurface">#FBEEEB</color>
+    <color name="md_theme_light_inverseSurface">#362F2D</color>
+    <color name="md_theme_light_inversePrimary">#FFB5A0</color>
+    <color name="md_theme_light_shadow">#000000</color>
+    <color name="md_theme_light_surfaceTint">#B02F00</color>
+    <color name="md_theme_light_outlineVariant">#D8C2BC</color>
+    <color name="md_theme_light_scrim">#000000</color>
+    <color name="md_theme_dark_primary">#FFB5A0</color>
+    <color name="md_theme_dark_onPrimary">#5F1500</color>
+    <color name="md_theme_dark_primaryContainer">#862200</color>
+    <color name="md_theme_dark_onPrimaryContainer">#FFDBD1</color>
+    <color name="md_theme_dark_secondary">#E7BDB2</color>
+    <color name="md_theme_dark_onSecondary">#442A22</color>
+    <color name="md_theme_dark_secondaryContainer">#5D4037</color>
+    <color name="md_theme_dark_onSecondaryContainer">#FFDBD1</color>
+    <color name="md_theme_dark_tertiary">#FFB59D</color>
+    <color name="md_theme_dark_onTertiary">#5D1900</color>
+    <color name="md_theme_dark_tertiaryContainer">#7C2E11</color>
+    <color name="md_theme_dark_onTertiaryContainer">#FFDBD0</color>
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="md_theme_dark_errorContainer">#93000A</color>
+    <color name="md_theme_dark_onError">#690005</color>
+    <color name="md_theme_dark_onErrorContainer">#FFDAD6</color>
+    <color name="md_theme_dark_background">#201A18</color>
+    <color name="md_theme_dark_onBackground">#EDE0DC</color>
+    <color name="md_theme_dark_surface">#201A18</color>
+    <color name="md_theme_dark_onSurface">#EDE0DC</color>
+    <color name="md_theme_dark_surfaceVariant">#53433F</color>
+    <color name="md_theme_dark_onSurfaceVariant">#D8C2BC</color>
+    <color name="md_theme_dark_outline">#A08C87</color>
+    <color name="md_theme_dark_inverseOnSurface">#201A18</color>
+    <color name="md_theme_dark_inverseSurface">#EDE0DC</color>
+    <color name="md_theme_dark_inversePrimary">#B02F00</color>
+    <color name="md_theme_dark_shadow">#000000</color>
+    <color name="md_theme_dark_surfaceTint">#FFB5A0</color>
+    <color name="md_theme_dark_outlineVariant">#53433F</color>
+    <color name="md_theme_dark_scrim">#000000</color>
+
+
+    <color name="boulder_orange">#FF5722</color>
+    <color name="boulder_orange_bg">#e6704d</color>
+
+    <color name="boulder_green">#4CAF50</color>
+    <color name="boulder_green_bg">#5f9661</color>
+
+    <color name="boulder_blue">#03A9F4</color>
+    <color name="boulder_blue_bg">#2ea4db</color>
+
+    <color name="boulder_red">#D32F2F</color>
+    <color name="boulder_red_bg">#ba4f4f</color>
+
+    <color name="boulder_purple">#9C27B0</color>
+    <color name="boulder_purple_bg">#894096</color>
+
+    <color name="boulder_yellow">#FFEB3B</color>
+    <color name="boulder_yellow_bg">#e6d963</color>
+
+    <color name="boulder_black">#000000</color>
+    <color name="boulder_black_bg">#ad9999</color>
+
+    <color name="boulder_white">#FFFFFF</color>
+    <color name="boulder_white_bg">#e6b8b8</color>
+
+    <color name="boulder_grey">#757575</color>
+    <color name="boulder_grey_bg">#8f7272</color>
+
+    <color name="boulder_pink">#E91E63</color>
+    <color name="boulder_pink_bg">#d04573</color>
+
+    <color name="boulder_any">#00000000</color>
+    <color name="boulder_any_bg">#00000000</color>
 
     <array name="boulder_colors">
-        <item>#FF5722</item> <!-- orange -->
-        <item>#4CAF50</item> <!-- green -->
-        <item>#03A9F4</item> <!-- blue -->
-        <item>#D32F2F</item> <!-- red -->
-        <item>#9C27B0</item> <!-- purple -->
-        <item>#FFEB3B</item> <!-- yellow -->
-        <item>#FF000000</item> <!-- black -->
-        <item>#FFFFFFFF</item> <!-- white -->
-        <item>#FF757575</item> <!-- grey -->
-        <item>#E91E63</item> <!-- pink -->
-        <item>#00000000</item> <!-- any -->
+        <item>@color/boulder_orange</item> <!-- orange -->
+        <item>@color/boulder_green</item> <!-- green -->
+        <item>@color/boulder_blue</item> <!-- blue -->
+        <item>@color/boulder_red</item> <!-- red -->
+        <item>@color/boulder_purple</item> <!-- purple -->
+        <item>@color/boulder_yellow</item> <!-- yellow -->
+        <item>@color/boulder_black</item> <!-- black -->
+        <item>@color/boulder_white</item> <!-- white -->
+        <item>@color/boulder_grey</item> <!-- grey -->
+        <item>@color/boulder_pink</item> <!-- pink -->
+        <item>@color/boulder_any</item> <!-- any -->
     </array>
+
+    <array name="boulder_bg_colors">
+        <!--https://www.sessions.edu/color-calculator/-->
+        <item>@color/boulder_orange_bg</item> <!-- orange -->
+        <item>@color/boulder_green_bg</item> <!-- green -->
+        <item>@color/boulder_blue_bg</item> <!-- blue -->
+        <item>@color/boulder_red_bg</item> <!-- red -->
+        <item>@color/boulder_purple_bg</item> <!-- purple -->
+        <item>@color/boulder_yellow_bg</item> <!-- yellow -->
+        <item>@color/boulder_black_bg</item> <!-- black -->
+        <item>@color/boulder_white_bg</item> <!-- white -->
+        <item>@color/boulder_grey_bg</item> <!-- grey -->
+        <item>@color/boulder_pink_bg</item> <!-- pink -->
+        <item>@color/boulder_any_bg</item> <!-- any -->
+    </array>
+
 </resources>

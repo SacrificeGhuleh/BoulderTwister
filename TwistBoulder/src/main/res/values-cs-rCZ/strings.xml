@@ -3,6 +3,10 @@
     <string name="app_name">Twist Boulder</string>
     <string name="placement_string">%1$s na %2$s</string>
     <string name="step_string">Krok %1$d</string>
+    <string name="next">Další</string>
+    <string name="reset">Reset</string>
+    <string name="start">Start</string>
+
     <string-array name="boulder_colors_names">
         <item>Oranžová</item>
         <item>Zelená</item>

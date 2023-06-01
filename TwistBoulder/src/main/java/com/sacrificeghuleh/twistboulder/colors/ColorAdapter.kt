@@ -18,14 +18,18 @@ class ColorAdapter(
     inner class ColorViewHolder(colorView: View) : RecyclerView.ViewHolder(colorView) {
         val checkbox: CheckBox
         val imageView: ImageView
+        val imageViewBG: ImageView
 
         init {
             checkbox = colorView.findViewById(R.id.colorEnableCheckbox)
             imageView = colorView.findViewById(R.id.colorPreviewView)
+            imageViewBG = colorView.findViewById(R.id.colorPreviewViewBG)
         }
 
-        fun setSvgColor(color: Color) =
-            imageView.setColorFilter(color.toArgb(), PorterDuff.Mode.SRC_IN)
+        fun setSvgColor(colorFg: Color, colorBg: Color) {
+            imageView.setColorFilter(colorFg.toArgb(), PorterDuff.Mode.SRC_IN)
+            imageViewBG.setColorFilter(colorBg.toArgb(), PorterDuff.Mode.SRC_IN)
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ColorViewHolder {
@@ -44,9 +48,10 @@ class ColorAdapter(
             checkbox.text = colors[position].name
 
             if (position < colors.size - 1) {
-                setSvgColor(colors[position].color)
+                setSvgColor(colors[position].color, colors[position].colorAdjacent)
             } else {
                 imageView.setImageResource(R.drawable.circlecolorful)
+                imageViewBG.setImageResource(R.drawable.circlecolorful_bg)
             }
 
             checkbox.setOnClickListener {

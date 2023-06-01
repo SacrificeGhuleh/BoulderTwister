@@ -8,12 +8,14 @@ data class ColorModel(
     val name: String,
     val nameAdjective: String,
     val color: android.graphics.Color,
+    val colorAdjacent: android.graphics.Color,
     var svgResourceVal: Int,
     var enabled: Boolean = true
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString() as String,
         parcel.readString() as String,
+        Color.valueOf(parcel.readInt()),
         Color.valueOf(parcel.readInt()),
         parcel.readInt(),
         parcel.readInt() == 1
@@ -23,6 +25,7 @@ data class ColorModel(
         parcel.writeString(name)
         parcel.writeString(nameAdjective)
         parcel.writeInt(color.toArgb())
+        parcel.writeInt(colorAdjacent.toArgb())
         parcel.writeInt(svgResourceVal)
         parcel.writeInt(if (enabled) 1 else 0)
     }

@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         val colNamesAdj =
             resources.getStringArray(R.array.boulder_colors_names_adjectives) //Array<String>
         val colCodes = resources.getIntArray(R.array.boulder_colors) // IntArray
+        val adjColCodes = resources.getIntArray(R.array.boulder_bg_colors) // IntArray
 
         for (i in colNames.indices) {
             Log.d("MainActivity", "Setting up color $i")
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                     colNames[i],
                     colNamesAdj[i],
                     Color.valueOf(colCodes[i]),
+                    Color.valueOf(adjColCodes[i]),
                     R.drawable.circle
                 )
             )
@@ -60,14 +62,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun addColorAdapter() {
         val colorAdapter = ColorAdapter(twistBoulderSetting.colorModels)
-        var recyclerView = findViewById<RecyclerView>(R.id.colors_recycler_view)
+        val recyclerView = findViewById<RecyclerView>(R.id.colors_recycler_view)
         recyclerView.adapter = colorAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
     }
 
     private fun addLimbsAdapter() {
         val limbAdapter = LimbAdapter(twistBoulderSetting.limbModels)
-        var recyclerView = findViewById<RecyclerView>(R.id.limbs_recycler_view)
+        val recyclerView = findViewById<RecyclerView>(R.id.limbs_recycler_view)
         recyclerView.adapter = limbAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
     }

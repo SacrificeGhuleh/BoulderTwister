@@ -68,10 +68,24 @@ class TwistActivity : AppCompatActivity() {
 
     private fun onRegenerate() {
         var imageView = findViewById<ImageView>(R.id.imageView)
+        var imageViewBg = findViewById<ImageView>(R.id.imageViewBG)
+
         imageView.clearColorFilter()
+        imageViewBg.clearColorFilter()
+
         imageView.setImageResource(currentColor!!.svgResourceVal)
-        if (currentColor!!.svgResourceVal != R.drawable.circlecolorful)
+
+        if (currentColor!!.svgResourceVal != R.drawable.circlecolorful) {
+            imageViewBg.setImageResource(currentColor!!.svgResourceVal)
+
             imageView.setColorFilter(currentColor!!.color.toArgb(), PorterDuff.Mode.SRC_IN)
+            imageViewBg.setColorFilter(
+                currentColor!!.colorAdjacent.toArgb(),
+                PorterDuff.Mode.SRC_IN
+            )
+        } else {
+            imageViewBg.setImageResource(R.drawable.circlecolorful_bg)
+        }
 
         var stepTextView = findViewById<TextView>(R.id.stepTextView)
         stepTextView.text = resources.getString(R.string.step_string, step)
