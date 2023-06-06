@@ -30,7 +30,7 @@ jobs:
           path: TwistBoulder/build/outputs/apk/debug/TwistBoulder-debug.apk
   release:
     name: Release
-    needs: apk
+    needs: build
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
