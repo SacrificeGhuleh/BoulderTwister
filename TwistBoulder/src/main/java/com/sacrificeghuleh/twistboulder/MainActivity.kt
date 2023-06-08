@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sacrificeghuleh.twistboulder.colors.ColorAdapter
@@ -64,7 +65,8 @@ class MainActivity : AppCompatActivity() {
         val colorAdapter = ColorAdapter(twistBoulderSetting.colorModels)
         val recyclerView = findViewById<RecyclerView>(R.id.colors_recycler_view)
         recyclerView.adapter = colorAdapter
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        // recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
     }
 
     private fun addLimbsAdapter() {
@@ -74,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
     }
 
-    fun startTwist(view: View) {
+    fun startTwist(@Suppress("UNUSED_PARAMETER") view: View) {
         val intent = Intent(this, TwistActivity::class.java)
 
         var parcel = BoulderSettings(ArrayList(), ArrayList())

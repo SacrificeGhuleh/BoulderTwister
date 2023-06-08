@@ -98,11 +98,11 @@ class TwistActivity : AppCompatActivity() {
         )
     }
 
-    fun onClickGenerate(view: View) {
+    fun onClickGenerate(@Suppress("UNUSED_PARAMETER") view: View) {
         generate()
     }
 
-    fun onClickReset(view: View) {
+    fun onClickReset(@Suppress("UNUSED_PARAMETER") view: View) {
         best = max(best, step)
         step = 0
         generate()

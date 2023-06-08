@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.sacrificeghuleh.twistboulder.R
 
@@ -16,12 +17,14 @@ class ColorAdapter(
 ) : RecyclerView.Adapter<ColorAdapter.ColorViewHolder>() {
 
     inner class ColorViewHolder(colorView: View) : RecyclerView.ViewHolder(colorView) {
-        val checkbox: CheckBox
+        val colorPreviewText: TextView
+        val checkMarkTextView: TextView
         val imageView: ImageView
         val imageViewBG: ImageView
 
         init {
-            checkbox = colorView.findViewById(R.id.colorEnableCheckbox)
+            colorPreviewText = colorView.findViewById(R.id.colorPreviewText)
+            checkMarkTextView = colorView.findViewById(R.id.checkMarkTextView)
             imageView = colorView.findViewById(R.id.colorPreviewView)
             imageViewBG = colorView.findViewById(R.id.colorPreviewViewBG)
         }
@@ -45,7 +48,7 @@ class ColorAdapter(
                 this.javaClass.name,
                 "Adding " + colors[position].name + " at position $position"
             )
-            checkbox.text = colors[position].name
+            colorPreviewText.text = colors[position].name
 
             if (position < colors.size - 1) {
                 setSvgColor(colors[position].color, colors[position].colorAdjacent)
@@ -53,10 +56,23 @@ class ColorAdapter(
                 imageView.setImageResource(R.drawable.circlecolorful)
                 imageViewBG.setImageResource(R.drawable.circlecolorful_bg)
             }
-
-            checkbox.setOnClickListener {
-                colors[position].enabled = checkbox.isChecked
+            fun onclick() {
+                colors[position].enabled = !colors[position].enabled
+                if (colors[position].enabled) {
+                    checkMarkTextView.setText(com.sacrificeghuleh.fontawesome.R.string.fa_circle_check)
+                } else {
+                    checkMarkTextView.setText(com.sacrificeghuleh.fontawesome.R.string.fa_circle_xmark)
+                }
             }
+
+            colorPreviewText.setOnClickListener {
+                onclick()
+            }
+
+            imageView.setOnClickListener {
+                onclick()
+            }
+
         }
     }
 
