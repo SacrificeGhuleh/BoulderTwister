@@ -1,12 +1,12 @@
 # Twist Boulder Game App
 
-================
 <a href="https://github.com/melihaksoy/StrokedTextView" target="_blank"><img src="https://img.shields.io/github/release/melihaksoy/StrokedTextView.svg?color=FF">
 <a href="http://developer.android.com/index.html" target="_blank"><img src="https://img.shields.io/badge/platform-android-green.svg"/></a>
 <a href="https://android-arsenal.com/api?level=26" target="_blank"><img src="https://img.shields.io/badge/API-26%2B-brightgreen.svg?style=flat"/></a>
 <a href="http://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat"/></a>
 
 TODO screenshot here
+
 [//]: # (![Twist Boulder Game App]&#40;app_screenshot.png&#41;)
 
 The Twist Boulder Game App is a fun and interactive game designed for bouldering enthusiasts.
@@ -28,7 +28,8 @@ boulder holds of various colors.
 
 ## Screenshots
 
-TODO
+TODO screenshots here
+
 [//]: # (![Screenshot 1]&#40;screenshot1.png&#41; ![Screenshot 2]&#40;screenshot2.png&#41;)
 
 ## Compatibility
