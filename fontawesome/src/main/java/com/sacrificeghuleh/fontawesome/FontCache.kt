@@ -1,26 +1,28 @@
-package com.sacrificeghuleh.fontawesome;
+package com.sacrificeghuleh.fontawesome
 
-import android.content.Context;
-import android.graphics.Typeface;
+import android.content.Context
+import android.graphics.Typeface
+import com.sacrificeghuleh.fontawesome.FontCache
+import java.lang.Exception
+import java.util.*
 
-import java.util.Hashtable;
+object FontCache {
+    const val FA_FONT_REGULAR = "fa-regular-400.ttf"
+    const val FA_FONT_SOLID = "fa-solid-900.ttf"
+    const val FA_FONT_BRANDS = "fa-brands-400.ttf"
+    private val fontCache = Hashtable<String, Typeface?>()
 
-public class FontCache {
-    public static final String FA_FONT_REGULAR = "fa-regular-400.ttf";
-    public static final String FA_FONT_SOLID = "fa-solid-900.ttf";
-    public static final String FA_FONT_BRANDS = "fa-brands-400.ttf";
-    private static Hashtable<String, Typeface> fontCache = new Hashtable<>();
-
-    public static Typeface get(Context context, String name) {
-        Typeface typeface = fontCache.get(name);
+    @JvmStatic
+    operator fun get(context: Context, name: String): Typeface? {
+        var typeface = fontCache[name]
         if (typeface == null) {
-            try {
-                typeface = Typeface.createFromAsset(context.getAssets(), name);
-            } catch (Exception e) {
-                return null;
+            typeface = try {
+                Typeface.createFromAsset(context.assets, name)
+            } catch (e: Exception) {
+                return null
             }
-            fontCache.put(name, typeface);
+            fontCache[name] = typeface
         }
-        return typeface;
+        return typeface
     }
 }

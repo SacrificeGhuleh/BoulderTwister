@@ -63,7 +63,9 @@
                 app:layout_constraintBottom_toBottomOf="@+id/colorPreviewView"
                 app:layout_constraintEnd_toEndOf="@+id/colorPreviewView"
                 app:layout_constraintStart_toStartOf="@+id/colorPreviewView"
-                app:layout_constraintTop_toTopOf="@+id/colorPreviewView" />
+                app:layout_constraintTop_toTopOf="@+id/colorPreviewView"
+                app:strokeColor="@color/md_theme_light_onSecondaryContainer"
+                app:strokeThickness="6dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
